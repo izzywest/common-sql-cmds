@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PHP SQL Commands</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+
+<style>
+    li {
+        list-style-type: none;
+    }
+</style>
+
+<body class="container">
+    <div class="jumbotron">
+        <h1>Overview basic php sql commands</h1>
+        <li><a href="#createDB">Create database</a></li>
+        <li><a href="#createTb">Create table</a></li>
+        <li><a href="#insDataTb">Insert data into table</a></li>
+        <li><a href="#columnTb">Add column in table</a></li>
+        <li><a href="#dropColumn">Drop column in table</a></li>
+        <li><a href="#addFK">Add foreign key</a></li>
+        <li><a href="#addPK">Add primary key</a></li>
+    </div>
+    <h2 id="createDB">Create database</h2>
+    <code>CREATE DATABASE library;</code>
+    <hr>
+
+    <h2 id="createTb">Create table</h2>
+    <code>CREATE TABLE books_table (
+        id_books int,
+        title varchar(100),
+        genre varchar(50),
+        PRIMARY KEY( id_books )
+        );
+    </code>
+    <hr>
+
+    <h2 id="insDataTb">Insert data into table</h2>
+    <code>INSERT INTO books_table (ageRange,book_cov,descr,fk_publ_id,genre) <br>
+    VALUES (60, 'hardcover', 'Bacon ipsum blablabla', 001, 'romantic');
+    </code>
+    <hr>
+
+    <h2 id="columnTb">Add column in table</h2>
+    <code>
+            ALTER TABLE table_name <br>
+            ADD column_name datatype; 
+    </code>
+    <hr>
+
+    <h2 id="dropColumn">Drop column in table</h2>
+    <code>ALTER TABLE table_name <br>
+        DROP COLUMN column_name; 
+    </code>
+    <hr>
+
+    <h2 id="addFK">Add foreign key</h2>
+    <code>ALTER TABLE bookspublishedtbl<br>
+            ADD FOREIGN KEY (fk_ISBN)<br>
+            REFERENCES booktbl(ISBN);</code>
+    <hr>
+
+    <h2 id="addPK">Add primary key</h2>
+    <code>ALTER TABLE bookspublishedtbl<br>
+        ADD PRIMARY KEY (bp_ID);</code>
+    <hr>
+
+</body>
+
+</html>
