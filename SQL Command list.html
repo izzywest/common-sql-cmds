@@ -23,6 +23,7 @@
         <li><a href="#dropColumn">Drop column in table</a></li>
         <li><a href="#addFK">Add foreign key</a></li>
         <li><a href="#addPK">Add primary key</a></li>
+        <li><a href="#collation">Change collation</a></li>
     </div>
     <h2 id="createDB">Create database</h2>
     <code>CREATE DATABASE library;</code>
@@ -68,6 +69,11 @@
         ADD PRIMARY KEY (bp_ID);</code>
     <hr>
 
+    <h2 id="collation">Change collation</h2>
+    <code>ALTER TABLE 'table-name' CONVERT TO 
+    CHARACTER SET utf8mb4 
+    COLLATE utf8mb4_unicode_ci;</code>
+    <hr>
 </body>
 
 </html>
